@@ -1,0 +1,28 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Medicine Reminder</string>
+
+    <string name="open_sans_bold">open_sans_bold</string>
+    <string name="open_sans_regular">open_sans_regular</string>
+    <string name="open_sans_semi_bold">open_sans_semi_bold</string>
+    <string name="open_sans_italic">open_sans_italic</string>
+
+    <string name="warning_no">Skip</string>
+    <string name="warning_yes">Accept</string>
+    <string name="warning_ignore">Skip</string>
+    <string name="warning">Warning</string>
+    <string name="suggest">Suggestion</string>
+    <string name="warning_title">Your device not support text to speech for this language. Pls install on google plays than restart device.</string>
+    <string name="set_default_engine_google">Need to install Google Text to Speech for defaults</string>
+    <string name="not_support_speech_to_text">Voice Detected not support</string>
+    <string name="do_not_show_again">Do not show again</string>
+
+    <!-- Ignore/Silence reasons -->
+    <string name="reason_silent"> Silent mode </string>
+    <string name="reason_call"> on-going phone </string>
+    <string name="reason_screen_off"> Turn off screen </string>
+    <string name="reason_screen_on"> Turn on screen </string>
+    <string name="reason_headset_off"> Turn off head-phone </string>
+    <string name="reason_headset_on"> Turn on head phone </string>
+    <string name="reason_suspended"> Application have been suspended by widget </string>
+
+</resources>

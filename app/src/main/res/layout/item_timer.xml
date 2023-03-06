@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.dab.medireminder.customview.UITextViewCustom
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_item_timer"
+        android:gravity="center"
+        android:id="@+id/tv_time"
+        android:padding="10dp"
+        android:layout_margin="12dp"
+        android:text="09:00"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:setStyleTextView="@string/open_sans_semi_bold" />
+
+    <RelativeLayout
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/btn_add"
+        android:visibility="visible"
+        android:layout_margin="12dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_item_add">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:src="@drawable/ic_add" />
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="25dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardElevation="2dp"
+        app:cardCornerRadius="12.5dp"
+        android:layout_margin="5dp"
+        android:id="@+id/btn_delete"
+        android:layout_height="25dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:padding="8dp"
+            android:src="@drawable/ic_close" />
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Main UI colors-->
+    <color name="change_1">#E68815</color>
+    <color name="change_2">#C5DFDF</color>
+    <color name="change_3">#BD9E84</color>
+    <color name="change_4">#D31638</color>
+    <color name="change_5">#A71666</color>
+
+    <!-- UI colors 2-->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#65000000</color>
+    <color name="pink">#FA7066</color>
+    <color name="green">#24F40D</color>
+    <color name="red">#F35252</color>
+
+
+    <!-- UI colors testing-->
+    <color name="blue">#0578b9</color>
+    <color name="blue_1">#25a0ca</color>
+    <color name="blue_2">#4ad1e4</color>
+    <color name="color_text">#515151</color>
+    <color name="color_button">#183775</color>
+    <color name="color_subtitle">#94183775</color>
+    <color name="color_line_edittext">#D1D1D1</color>
+    <color name="color_hint_text">#838282</color>
+    <color name="color_b7b7b7">#b7b7b7</color>
+    <color name="color_ececec">#ececec</color>
+    <color name="color_chart_prepay">#FE9A00</color>
+
+    <!-- PickerUI lines colors -->
+    <color name="lines_panel_pickerui">#aaaaaa</color>
+    <!-- PickerUI panel colors -->
+    <color name="background_panel_pickerui">#ECECEC</color>
+    <!-- PickerUI items colors -->
+    <color name="text_center_pickerui">@color/blue_1</color>
+    <color name="text_no_center_pickerui">#aaa</color>
+    <drawable name="list_item_selected">#aaaaaa</drawable>
+    <!-- PickerUI shadow colors -->
+    <color name="grey1">#00CCCCCC</color>
+    <color name="grey2">#10CCCCCC</color>
+    <color name="grey3">#20CCCCCC</color>
+    <color name="grey4">#30CCCCCC</color>
+    <color name="grey5">#50747474</color>
+    <color name="divide_line">#70e7e7e7</color>
+</resources>

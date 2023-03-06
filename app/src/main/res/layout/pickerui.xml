@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/white">
+
+        <com.dab.medireminder.customview.UITextViewCustom
+            android:id="@+id/close_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_ripple_transparent"
+            android:padding="10dp"
+            android:text="Close"
+            android:textColor="@color/blue_1"
+            android:textSize="16sp"
+            tools:ignore="HardcodedText" />
+
+        <com.dab.medireminder.customview.UITextViewCustom
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Time Picker"
+            app:setStyleTextView="@string/open_sans_bold"
+            android:textColor="@color/blue_1"
+            android:textSize="18sp"
+            tools:ignore="HardcodedText" />
+
+        <com.dab.medireminder.customview.UITextViewCustom
+            android:id="@+id/choose_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_ripple_transparent"
+            android:padding="10dp"
+            android:text="Select"
+            android:textColor="@color/blue_1"
+            android:textSize="16sp"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+
+    <View
+        style="@style/line_center_default"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/hidden_panel"
+        android:gravity="center"
+        android:layout_height="@dimen/height_hidden_panel_pickerui">
+
+        <RelativeLayout
+            android:id="@+id/hidden_panel_hour"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:background="@android:color/white"
+            android:visibility="visible">
+
+            <com.dab.medireminder.dialog.picker.PickerUIListView
+                android:id="@+id/picker_ui_listview"
+                style="@style/PickerUI.ListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/pickerui_item" />
+
+            <View
+                android:id="@+id/picker_line_top"
+                style="@style/line_center_default"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_top_line_top_pickerui" />
+
+            <View
+                android:id="@+id/picker_line_bottom"
+                style="@style/line_center_default"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_top_line_bottom_pickerui" />
+
+        </RelativeLayout>
+
+        <com.dab.medireminder.customview.UITextViewCustom
+            android:layout_width="wrap_content"
+            android:textSize="30sp"
+            android:textColor="@color/blue_1"
+            android:id="@+id/tv_division"
+            android:text=":"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            tools:ignore="HardcodedText" />
+
+        <RelativeLayout
+            android:id="@+id/hidden_panel_minute"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_centerVertical="true"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:background="@android:color/white"
+            android:visibility="visible"
+            tools:ignore="ObsoleteLayoutParam">
+
+            <com.dab.medireminder.dialog.picker.PickerUIListView
+                android:id="@+id/picker_ui_listview_minute"
+                style="@style/PickerUI.ListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/pickerui_item" />
+
+            <View
+                android:id="@+id/picker_line_top_minute"
+                style="@style/line_center_default"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_top_line_top_pickerui" />
+
+            <View
+                android:id="@+id/picker_line_bottom_minute"
+                style="@style/line_center_default"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_top_line_bottom_pickerui" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

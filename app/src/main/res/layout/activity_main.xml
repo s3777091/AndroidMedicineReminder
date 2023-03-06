@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/banner_home" />
+
+    <include layout="@layout/layout_menu_home" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/sv_home"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-30dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="16dp">
+
+        <com.dab.medireminder.customview.UITextViewCustom
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/sv_home"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_title_home"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingLeft="25dp"
+            android:paddingTop="14dp"
+            android:paddingRight="25dp"
+            android:paddingBottom="14dp"
+            android:text="@string/app_name"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:setStyleTextView="@string/open_sans_bold" />
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

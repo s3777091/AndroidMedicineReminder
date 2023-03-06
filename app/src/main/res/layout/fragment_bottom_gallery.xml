@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:maxHeight="180dp"
+    app:behavior_skipCollapsed="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/ll_gallery"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:animateLayoutChanges="true"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_gallery" />
+
+                <com.dab.medireminder.customview.UITextViewCustom
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Galary"
+                    android:textColor="@color/blue_1"
+                    android:textSize="16sp"
+                    app:setStyleTextView="@string/open_sans_semi_bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_camera"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:animateLayoutChanges="true"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_camera" />
+
+                <com.dab.medireminder.customview.UITextViewCustom
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Camera"
+                    android:textColor="@color/blue_1"
+                    android:textSize="16sp"
+                    app:setStyleTextView="@string/open_sans_semi_bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            style="@style/line_center_default"
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <com.dab.medireminder.customview.UITextViewCustom
+            android:id="@+id/close_tv"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_ripple_transparent"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Cancel"
+            android:textAllCaps="true"
+            android:textColor="@color/color_text"
+            android:textSize="16sp" />
+
+        <View
+            style="@style/line_center_default"
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

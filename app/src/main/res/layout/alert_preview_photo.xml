@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true">
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:layout_width="match_parent"
+        android:id="@+id/photo_view"
+        android:scaleType="fitCenter"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="120dp"
+        app:cardCornerRadius="25dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="50dp"
+        app:cardElevation="5dp"
+        app:cardBackgroundColor="@android:color/white"
+        android:id="@+id/btn_close"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_height="50dp">
+
+        <com.dab.medireminder.customview.UITextViewCustom
+            android:id="@+id/tv_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Close"
+            android:textAllCaps="true"
+            android:textColor="@color/blue_1"
+            android:textSize="18sp"
+            app:setStyleTextView="@string/open_sans_bold" />
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

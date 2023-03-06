@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/banner_home" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/bg_menu_main"
+        android:paddingLeft="20dp"
+        android:paddingTop="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="30dp">
+
+        <com.dab.medireminder.customview.UITextViewCustom
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@+id/btn_close"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Setting time medicine"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:setStyleTextView="@string/open_sans_bold" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btn_close"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:padding="8dp"
+            android:src="@drawable/ic_close" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nsv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btn_timer"
+            android:layout_below="@+id/btn_close"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.dab.medireminder.customview.UITextViewCustom
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name Medicine"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:setStyleTextView="@string/open_sans_bold" />
+
+                <EditText
+                    android:id="@+id/edt_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:hint="Levothyroxine"
+                    android:maxLines="1"
+                    android:paddingTop="16dp"
+                    android:textColor="@color/blue_1"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/color_line_edittext" />
+
+                <com.dab.medireminder.customview.UITextViewCustom
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Dose"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:setStyleTextView="@string/open_sans_bold" />
+
+                <EditText
+                    android:id="@+id/edit_dose"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:hint="1 pill"
+                    android:paddingTop="16dp"
+                    android:textColor="@color/blue_1"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/color_line_edittext" />
+
+                <com.dab.medireminder.customview.UITextViewCustom
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Time"
+                    android:textColor="@color/color_button"
+                    android:textSize="16sp"
+                    app:setStyleTextView="@string/open_sans_bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_timer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp" />
+
+
+                <com.dab.medireminder.customview.UITextViewCustom
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Repeat"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:setStyleTextView="@string/open_sans_bold" />
+
+                <com.dab.medireminder.customview.UITextViewCustom
+                    android:id="@+id/tv_repeat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_note"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="16dp"
+                    android:layout_marginTop="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="16dp"
+                    android:text="Daily"
+                    android:textColor="@color/blue_1"
+                    android:textSize="16sp"
+                    app:setStyleTextView="@string/open_sans_semi_bold" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_timer"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="@color/change_1"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="5dp">
+
+            <com.dab.medireminder.customview.UITextViewCustom
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Add"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                app:setStyleTextView="@string/open_sans_bold" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/ll_suggest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/nsv_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/white"
+            app:cardCornerRadius="5dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcv_suggest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+</RelativeLayout>
+
